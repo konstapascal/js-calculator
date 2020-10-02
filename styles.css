@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #537895;
+	background-image: linear-gradient(315deg, #537895 0%, #09203f 74%);
+}
+
+.calculator-container {
+	box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+}
+
+.calculator-display {
+	background-color: rgb(53, 53, 53);
+	color: white;
+	padding: 0.75rem 1rem;
+	text-align: right;
+}
+
+.button {
+	border: none;
+	padding: 0.3rem;
+	color: white;
+	cursor: pointer;
+	background-color: black;
+}
