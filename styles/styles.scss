@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	font-family: 'Lato', serif;
 }
 
 body {
@@ -9,16 +10,16 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: #232526; /* fallback for old browsers */
+	background: #6190e8; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
-		to botttom,
-		#414345,
-		#232526
+		to right,
+		#a7bfe8,
+		#6190e8
 	); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(
-		to bottom,
-		#414345,
-		#232526
+		to right,
+		#a7bfe8,
+		#6190e8
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -27,16 +28,17 @@ body {
 	margin-top: -5%;
 	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
 		rgba(0, 0, 0, 0.22) 0px 10px 10px;
-	border-radius: 0.3rem;
+	border-radius: 0.75rem;
 	overflow: hidden;
 }
 
 .calculator-display {
-	background-color: #151515;
+	background-color: #232327;
 	color: white;
 	padding: 1.25rem 1.75rem;
 	text-align: right;
 	font-size: calc(1rem * 1.2 * 1.2);
+	word-wrap: break-word;
 }
 
 .calculator-buttons {
@@ -46,24 +48,27 @@ body {
 		'seven eight nine equal'
 		'four five six equal'
 		'one two three equal'
-		'decimal zero clear equal';
+		'zero clear clear equal';
 }
 
 .button {
-	border: none;
 	padding: 1rem 1.25rem;
-	background-color: #d1d1d1;
-	outline: none;
+	background-color: #fefefe;
 	color: black;
+	border: 2px solid transparent;
 	cursor: pointer;
 	transition: background-color 0.1s linear;
 
 	&:hover {
-		background-color: #b1b1b1;
+		background-color: #e4e4e4;
 	}
 
 	&:active {
-		background-color: #9b9b9b;
+		background-color: #c5c5c5;
+	}
+
+	&:focus {
+		border: 2px solid #232327;
 	}
 }
 
@@ -80,15 +85,15 @@ body {
 	}
 }
 
-.utility {
-	background-color: rgb(191, 191, 191);
+.operator {
+	background-color: rgb(228, 228, 228);
 
 	&:hover {
-		background-color: #a5a5a5;
+		background-color: rgb(204, 204, 204);
 	}
 
 	&:active {
-		background-color: #8a8a8a;
+		background-color: rgb(170, 170, 170);
 	}
 }
 
@@ -146,10 +151,6 @@ body {
 
 .zero {
 	grid-area: zero;
-}
-
-.decimal {
-	grid-area: decimal;
 }
 
 .clear {

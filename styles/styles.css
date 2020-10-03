@@ -3,6 +3,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Lato', serif;
 }
 
 body {
@@ -16,11 +17,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: #232526;
+  background: #6190e8;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, left bottom, from(#414345), to(#232526));
-  background: linear-gradient(to bottom, #414345, #232526);
+  background: -webkit-gradient(linear, left top, right top, from(#a7bfe8), to(#6190e8));
+  background: linear-gradient(to right, #a7bfe8, #6190e8);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -29,41 +30,45 @@ body {
   margin-top: -5%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
           box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-  border-radius: 0.3rem;
+  border-radius: 0.75rem;
   overflow: hidden;
 }
 
 .calculator-display {
-  background-color: #151515;
+  background-color: #232327;
   color: white;
   padding: 1.25rem 1.75rem;
   text-align: right;
   font-size: calc(1rem * 1.2 * 1.2);
+  word-wrap: break-word;
 }
 
 .calculator-buttons {
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'plus minus times divide' 'seven eight nine equal' 'four five six equal' 'one two three equal' 'decimal zero clear equal';
+      grid-template-areas: 'plus minus times divide' 'seven eight nine equal' 'four five six equal' 'one two three equal' 'zero clear clear equal';
 }
 
 .button {
-  border: none;
   padding: 1rem 1.25rem;
-  background-color: #d1d1d1;
-  outline: none;
+  background-color: #fefefe;
   color: black;
+  border: 2px solid transparent;
   cursor: pointer;
   -webkit-transition: background-color 0.1s linear;
   transition: background-color 0.1s linear;
 }
 
 .button:hover {
-  background-color: #b1b1b1;
+  background-color: #e4e4e4;
 }
 
 .button:active {
-  background-color: #9b9b9b;
+  background-color: #c5c5c5;
+}
+
+.button:focus {
+  border: 2px solid #232327;
 }
 
 .equal {
@@ -82,16 +87,16 @@ body {
   background-color: #d18800;
 }
 
-.utility {
-  background-color: #bfbfbf;
+.operator {
+  background-color: #e4e4e4;
 }
 
-.utility:hover {
-  background-color: #a5a5a5;
+.operator:hover {
+  background-color: #cccccc;
 }
 
-.utility:active {
-  background-color: #8a8a8a;
+.operator:active {
+  background-color: #aaaaaa;
 }
 
 .plus {
@@ -174,19 +179,14 @@ body {
 
 .zero {
   -ms-grid-row: 5;
-  -ms-grid-column: 2;
-  grid-area: zero;
-}
-
-.decimal {
-  -ms-grid-row: 5;
   -ms-grid-column: 1;
-  grid-area: decimal;
+  grid-area: zero;
 }
 
 .clear {
   -ms-grid-row: 5;
-  -ms-grid-column: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: clear;
 }
 /*# sourceMappingURL=styles.css.map */
