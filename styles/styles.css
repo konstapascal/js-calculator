@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  background: #fbd3e9;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(160deg, #ffc0e3, #bb377d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.calculator-container {
+  width: 20rem;
+  margin-top: -5%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+          box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius: 0.3rem;
+  overflow: hidden;
+}
+
+.calculator-display {
+  background-color: #d06ca1;
+  color: white;
+  padding: 1rem 1.25rem;
+  text-align: right;
+  font-size: calc(1rem * 1.2 * 1.2);
+}
+
+.calculator-buttons {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+      grid-template-areas: 'plus minus times divide' 'seven eight nine equal' 'four five six equal' 'one two three equal' 'zero decimal clear equal';
+}
+
+.button {
+  border: 1px solid #f1bad8;
+  padding: 1rem 1.25rem;
+  color: black;
+  cursor: pointer;
+  -webkit-transition: background-color 0.1s linear;
+  transition: background-color 0.1s linear;
+}
+
+.button:hover {
+  background-color: #dd8ab7;
+}
+
+.button:active {
+  background-color: #bd3c80;
+}
+
+.plus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: plus;
+}
+
+.minus {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: minus;
+}
+
+.times {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: times;
+}
+
+.divide {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: divide;
+}
+
+.one {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: one;
+}
+
+.two {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: two;
+}
+
+.three {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: three;
+}
+
+.four {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: four;
+}
+
+.five {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: five;
+}
+
+.six {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: six;
+}
+
+.seven {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: seven;
+}
+
+.eight {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: eight;
+}
+
+.nine {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: nine;
+}
+
+.zero {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: zero;
+}
+
+.decimal {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: decimal;
+}
+
+.clear {
+  -ms-grid-row: 5;
+  -ms-grid-column: 3;
+  grid-area: clear;
+}
+
+.equal {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 4;
+  grid-area: equal;
+  background-color: #f2bedb;
+}
+/*# sourceMappingURL=styles.css.map */
