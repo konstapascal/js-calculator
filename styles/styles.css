@@ -16,10 +16,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: #fbd3e9;
+  background: #232526;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(160deg, #ffc0e3, #bb377d);
+  background: -webkit-gradient(linear, left top, left bottom, from(#414345), to(#232526));
+  background: linear-gradient(to bottom, #414345, #232526);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -33,9 +34,9 @@ body {
 }
 
 .calculator-display {
-  background-color: #d06ca1;
+  background-color: #151515;
   color: white;
-  padding: 1rem 1.25rem;
+  padding: 1.25rem 1.75rem;
   text-align: right;
   font-size: calc(1rem * 1.2 * 1.2);
 }
@@ -43,14 +44,13 @@ body {
 .calculator-buttons {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[4];
-      grid-template-columns: repeat(4, auto);
-      grid-template-areas: 'plus minus times divide' 'seven eight nine equal' 'four five six equal' 'one two three equal' 'zero decimal clear equal';
+      grid-template-areas: 'plus minus times divide' 'seven eight nine equal' 'four five six equal' 'one two three equal' 'decimal zero clear equal';
 }
 
 .button {
-  border: 1px solid #f1bad8;
+  border: none;
   padding: 1rem 1.25rem;
+  background-color: #d1d1d1;
   color: black;
   cursor: pointer;
   -webkit-transition: background-color 0.1s linear;
@@ -58,11 +58,39 @@ body {
 }
 
 .button:hover {
-  background-color: #dd8ab7;
+  background-color: #b1b1b1;
 }
 
 .button:active {
-  background-color: #bd3c80;
+  background-color: #9b9b9b;
+}
+
+.equal {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 4;
+  -ms-grid-column: 4;
+  grid-area: equal;
+  background-color: #ffab10;
+}
+
+.equal:hover {
+  background-color: #ed9a00;
+}
+
+.equal:active {
+  background-color: #d18800;
+}
+
+.utility {
+  background-color: #bfbfbf;
+}
+
+.utility:hover {
+  background-color: #a5a5a5;
+}
+
+.utility:active {
+  background-color: #8a8a8a;
 }
 
 .plus {
@@ -145,13 +173,13 @@ body {
 
 .zero {
   -ms-grid-row: 5;
-  -ms-grid-column: 1;
+  -ms-grid-column: 2;
   grid-area: zero;
 }
 
 .decimal {
   -ms-grid-row: 5;
-  -ms-grid-column: 2;
+  -ms-grid-column: 1;
   grid-area: decimal;
 }
 
@@ -159,13 +187,5 @@ body {
   -ms-grid-row: 5;
   -ms-grid-column: 3;
   grid-area: clear;
-}
-
-.equal {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 4;
-  -ms-grid-column: 4;
-  grid-area: equal;
-  background-color: #f2bedb;
 }
 /*# sourceMappingURL=styles.css.map */

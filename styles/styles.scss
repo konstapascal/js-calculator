@@ -9,16 +9,16 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: #fbd3e9; /* fallback for old browsers */
+	background: #232526; /* fallback for old browsers */
 	background: -webkit-linear-gradient(
-		160deg,
-		#ffc0e3,
-		#bb377d
+		to botttom,
+		#414345,
+		#232526
 	); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(
-		160deg,
-		#ffc0e3,
-		#bb377d
+		to bottom,
+		#414345,
+		#232526
 	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
@@ -32,38 +32,62 @@ body {
 }
 
 .calculator-display {
-	background-color: #d06ca1;
+	background-color: #151515;
 	color: white;
-	padding: 1rem 1.25rem;
+	padding: 1.25rem 1.75rem;
 	text-align: right;
 	font-size: calc(1rem * 1.2 * 1.2);
 }
 
 .calculator-buttons {
 	display: grid;
-	grid-template-columns: repeat(4, auto);
 	grid-template-areas:
 		'plus minus times divide'
 		'seven eight nine equal'
 		'four five six equal'
 		'one two three equal'
-		'zero decimal clear equal';
+		'decimal zero clear equal';
 }
 
 .button {
-	border: 1px solid #f1bad8;
+	border: none;
 	padding: 1rem 1.25rem;
+	background-color: #d1d1d1;
 	color: black;
 	cursor: pointer;
-
 	transition: background-color 0.1s linear;
 
 	&:hover {
-		background-color: #dd8ab7;
+		background-color: #b1b1b1;
 	}
 
 	&:active {
-		background-color: #bd3c80;
+		background-color: #9b9b9b;
+	}
+}
+
+.equal {
+	grid-area: equal;
+	background-color: rgb(255, 171, 16);
+
+	&:hover {
+		background-color: rgb(237, 154, 0);
+	}
+
+	&:active {
+		background-color: rgb(209, 136, 0);
+	}
+}
+
+.utility {
+	background-color: rgb(191, 191, 191);
+
+	&:hover {
+		background-color: #a5a5a5;
+	}
+
+	&:active {
+		background-color: #8a8a8a;
 	}
 }
 
@@ -129,9 +153,4 @@ body {
 
 .clear {
 	grid-area: clear;
-}
-
-.equal {
-	grid-area: equal;
-	background-color: #f2bedb;
 }
