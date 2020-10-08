@@ -1,6 +1,6 @@
-const calculator = document.querySelector;
-const display = document.querySelector('.calculator-display');
-const keys = document.querySelector('.calculator-buttons');
+const calculator = document.querySelector('.calculator-container');
+const display = calculator.querySelector('.calculator-display');
+const keys = calculator.querySelector('.calculator-buttons');
 
 keys.addEventListener('click', event => {
 	const key = event.target;
@@ -18,7 +18,7 @@ keys.addEventListener('click', event => {
 
 	// check if key is operator
 	if (key.classList.contains('operator')) {
-		console.log(key);
+		calculator.dataset.lastOperator = keyValue;
 	}
 
 	// check if key pressed is clear
