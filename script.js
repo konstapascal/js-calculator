@@ -45,12 +45,14 @@ keys.addEventListener('click', event => {
 
 		if (calculator.dataset.lastOperator === '+')
 			result = +calculator.dataset.firstNumber + +calculator.dataset.secondNumber;
-		if (calculator.dataset.lastOperator === '-')
+		if (calculator.dataset.lastOperator === '−')
 			result = +calculator.dataset.firstNumber - +calculator.dataset.secondNumber;
 		if (calculator.dataset.lastOperator === '×')
 			result = +calculator.dataset.firstNumber * +calculator.dataset.secondNumber;
 		if (calculator.dataset.lastOperator === '÷')
 			result = +calculator.dataset.firstNumber / +calculator.dataset.secondNumber;
+
+		console.log(result);
 
 		display.innerHTML = result;
 	}
