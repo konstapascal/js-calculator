@@ -4,25 +4,54 @@ const keys = calculator.querySelector('.calculator-buttons');
 
 keys.addEventListener('click', event => {
 	const key = event.target;
-	const keyValue = key.textContent;
-	const displayValue = display.textContent;
 
-	// check if key is number
 	if (key.classList.contains('number')) {
-		if (displayValue === '0') {
-			display.textContent = keyValue;
+		if (display.textContent === '0') {
+			display.innerHTML = key.innerHTML;
+			calculator.dataset.lastOperator !== 'none'
+				? (calculator.dataset.secondNumber = key.innerHTML)
+				: (calculator.dataset.firstNumber = key.innerHTML);
 		} else {
-			display.textContent += keyValue;
+			display.innerHTML += key.innerHTML;
+			calculator.dataset.lastOperator !== 'none'
+				? (calculator.dataset.secondNumber += key.innerHTML)
+				: (calculator.dataset.firstNumber += key.innerHTML);
 		}
 	}
 
-	// check if key is operator
 	if (key.classList.contains('operator')) {
-		calculator.dataset.lastOperator = keyValue;
+		calculator.dataset.lastOperator = key.innerHTML;
+		display.innerHTML = '0';
 	}
 
-	// check if key pressed is clear
-	if (key.classList.contains('clear')) {
+	if (key.classList.contains('clear-all')) {
 		display.innerHTML = '0';
+		calculator.dataset.firstNumber = 'none';
+		calculator.dataset.secondNumber = 'none';
+		calculator.dataset.lastOperator = 'none';
+	}
+
+	if (key.classList.contains('clear')) {
+		display.innerHTML = display.innerHTML.slice(0, display.innerHTML.length - 1);
+		calculator.dataset.lastOperator !== 'none'
+			? (calculator.dataset.secondNumber = display.innerHTML)
+			: (calculator.dataset.firstNumber = display.innerHTML);
+
+		if (display.innerHTML === '') display.innerHTML = '0';
+	}
+
+	if (key.classList.contains('equals')) {
+		let result;
+
+		if (calculator.dataset.lastOperator === '+')
+			result = +calculator.dataset.firstNumber + +calculator.dataset.secondNumber;
+		if (calculator.dataset.lastOperator === '-')
+			result = +calculator.dataset.firstNumber - +calculator.dataset.secondNumber;
+		if (calculator.dataset.lastOperator === '×')
+			result = +calculator.dataset.firstNumber * +calculator.dataset.secondNumber;
+		if (calculator.dataset.lastOperator === '÷')
+			result = +calculator.dataset.firstNumber / +calculator.dataset.secondNumber;
+
+		display.innerHTML = result;
 	}
 });

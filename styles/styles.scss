@@ -49,7 +49,7 @@ body {
 		'seven eight nine equals'
 		'four five six equals'
 		'one two three equals'
-		'zero clear clear equals';
+		'clearAll zero clear equals';
 }
 
 .button {
@@ -156,4 +156,8 @@ body {
 
 .clear {
 	grid-area: clear;
+}
+
+.clear-all {
+	grid-area: clearAll;
 }
