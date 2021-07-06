@@ -12,11 +12,7 @@ body {
 	align-items: center;
 	height: 100vh;
 	background: #6190e8; /* fallback for old browsers */
-	background: -webkit-linear-gradient(
-		to right,
-		#a7bfe8,
-		#6190e8
-	); /* Chrome 10-25, Safari 5.1-6 */
+	background: -webkit-linear-gradient(to right, #a7bfe8, #6190e8); /* Chrome 10-25, Safari 5.1-6 */
 	background: linear-gradient(
 		to right,
 		#a7bfe8,
@@ -26,8 +22,7 @@ body {
 
 .calculator-container {
 	margin-top: -10%;
-	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-		rgba(0, 0, 0, 0.22) 0px 10px 10px;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 	border-radius: 0.5rem;
 	overflow: hidden;
 }
@@ -53,6 +48,7 @@ body {
 }
 
 .button {
+	border-radius: 0px;
 	padding: 1rem 2rem;
 	background-color: #fefefe;
 	color: black;
