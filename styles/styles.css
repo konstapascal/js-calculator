@@ -21,12 +21,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
-  background: #6190e8;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#a7bfe8), to(#6190e8));
-  background: linear-gradient(to right, #a7bfe8, #6190e8);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #fef3c7;
 }
 
 .calculator-container {
@@ -66,9 +61,6 @@ body {
 }
 .button:active {
   background-color: #cacaca;
-}
-.button:focus {
-  border: 2px solid #232327;
 }
 
 .equals {

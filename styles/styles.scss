@@ -11,13 +11,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	height: 100vh;
-	background: #6190e8; /* fallback for old browsers */
-	background: -webkit-linear-gradient(to right, #a7bfe8, #6190e8); /* Chrome 10-25, Safari 5.1-6 */
-	background: linear-gradient(
-		to right,
-		#a7bfe8,
-		#6190e8
-	); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	background: #fef3c7;
 }
 
 .calculator-container {
@@ -62,10 +56,6 @@ body {
 
 	&:active {
 		background-color: #cacaca;
-	}
-
-	&:focus {
-		border: 2px solid #232327;
 	}
 }
 
